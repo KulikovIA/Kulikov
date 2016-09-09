@@ -10,8 +10,8 @@ dt = 0.01
 tlist = mlab.frange (tmin, tmax, dt)
 pylab.ion()
 
-for a in range (50):
-    xlist=[math.sin(t+a/100) for t in tlist]
+for a in range (99):
+    xlist=[math.sin(t+a/50) for t in tlist]
     ylist = [math.cos(2*t) for t in tlist]
     pylab.clf()
     pylab.plot (xlist, ylist)
