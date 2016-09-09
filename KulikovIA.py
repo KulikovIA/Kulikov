@@ -3,16 +3,16 @@ import math
 import pylab
 from matplotlib import mlab
 
-xmin = -20.0
-xmax = 20.0
+tmin = -20.0
+tmax = 20.0
 
-dx = 0.01
-xlist = mlab.frange (xmin, xmax, dx)
-
+dt = 0.01
+tlist = mlab.frange (tmin, tmax, dt)
 pylab.ion()
 
-for n in range (50):
-    ylist = [math.sin (x + n / 2.0) for x in xlist]
+for a in range (50):
+    xlist=[math.sin(t+a/100) for t in tlist]
+    ylist = [math.cos(2*t) for t in tlist]
     pylab.clf()
     pylab.plot (xlist, ylist)
     pylab.draw()
